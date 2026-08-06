@@ -17,10 +17,11 @@ def main():
     while True:
         print("\n_________________________________________________________________________")
         print("\n|*< Bienvenidos al programa de Búsqueda de Platos Típicos de Colombia >*|")
-
-        codigo = input("\n|*< Ingrese el código del plato (o escriba 'salir'):                > \n ")
+        print("\n|*< Generado por : Aprendiz Generation Javier Geovanni Diaz Herrera   >*|")
+        codigo = input("\n|*< Ingrese el código del plato (o escriba 'salir'):                  >*|\n ")
         if codigo.lower() == "salir":
-            print("👋 Gracias por usar el programa.")
+            print("|*<👋 Gracias por usar el programa.")
+            print("\n_________________________________________________________________________")
             break
         elif not codigo.isdigit():
             print("❌ Por favor, ingrese un número válido.")
@@ -29,7 +30,7 @@ def main():
         print(f"|*< Buscando el plato con código {codigo}...                                 >*|\n")
         resultado = dish_fetch(num)
         print(f"|*< ID: {resultado['id']}                                                     ")
-        print(f"|*< Nombre: {resultado['name']}                                               ")
-        print(f"|*< Descripcion: {resultado['description']}                                     ")
+        print(f"|*< 🍽️  Nombre: {resultado['name']}                                               ")
+        print(f"|*< 😋 Descripcion del rico plato: {resultado['description']}                      ")
 if __name__=="__main__":
     main()
